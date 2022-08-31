@@ -14,6 +14,11 @@
     --accent-color: #2196F3;
     --border-color: #EEEEEE;
     --background-color-section1: #C4C4C4;
+    --primary-fill-social-links: #AFB1B8;
+    --secondary-fill-social-links: #FFFFFF;
+    --background-color-social-links: #FFFFFF;
+    --primary-fill-clients-icon: #AFB1B8;
+    --footer-fill-social-links: #FFFFFF;
 }
 
 h1,
@@ -74,7 +79,7 @@ body {
     align-items: baseline;
 }
 
-/* header */
+/*-- header --*/
 .header {
     border-bottom: 1px solid var(--border-color);
 }
@@ -135,50 +140,27 @@ body {
     column-gap: 30px;
 }
 
-.header-mail-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 161px;
-
-}
-
 .header-mail-icon {
     width: 16px;
     height: 12px;
-    fill: var(--primary-text-color-theme-dark);
     margin-right: 10px;
-}
-
-.header-mail-icon:hover {
-    fill: var(--accent-color);
-}
-
-.header-phone-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 142px;
 }
 
 .header-phone-icon {
     width: 10px;
     height: 16px;
-    fill: var(--primary-text-color-theme-dark);
     margin-right: 10px;
-}
-
-.header-phone-icon:hover {
-    fill: var(--accent-color);
 }
 
 .header-mail,
 .header-phone {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color-theme-dark);
+    fill: currentColor;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -192,7 +174,8 @@ body {
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url("../images/section1/bg.jpg");
-    background-size: cover;
+    background-size: 1600px;
+    background-position: 50% 50%;
 
 }
 
@@ -220,7 +203,7 @@ body {
     justify-content: center;
     letter-spacing: 0.06em;
     color: var(--primary-text-color-theme-light);
-    background-color: var(--btn-background-color);
+    background-color: var(--accent-color);
     border-radius: 4px;
     border: none;
     width: 216px;
@@ -233,7 +216,7 @@ body {
 .modal-btn:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    background-color: var(--accent-color);
+    background-color: var(--btn-background-color);
 }
 
 /*-- section 2 --*/
@@ -263,10 +246,12 @@ body {
 }
 
 .abilities-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 270px;
     height: 120px;
-    padding: 25px 100px;
-    background: #F5F4FA;
+    background: var(--tertiary-background-color);
     border-radius: 4px;
     margin-bottom: 30px;
 }
@@ -372,24 +357,20 @@ body {
     justify-content: center;
     width: 44px;
     height: 44px;
+    fill: var(--primary-fill-social-links);
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: var(--background-color-social-links);
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
     background-color: var(--accent-color);
+    fill: var(--secondary-fill-social-links);
 }
 
 .social-list-icon {
     width: 20px;
     height: 20px;
-    fill: #AFB1B8;
-}
-
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-    fill: #FFFFFF;
 }
 
 /*-- section 5 --*/
@@ -406,28 +387,20 @@ body {
     align-items: center;
     width: 170px;
     height: 92px;
-    border: 1px solid #AFB1B8;
+    fill: var(--primary-fill-clients-icon);
+    border: 1px solid var(--primary-fill-clients-icon);
     border-radius: 4px;
 }
 
 .clients-link:hover,
 .clients-link:focus {
     border-color: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 .clients-logo {
     width: 106px;
     height: 60px;
-    fill: #AFB1B8;
-}
-
-.clients-logo:hover {
-    fill: var(--accent-color);
-}
-
-.clients-link:hover .clients-logo,
-.clients-link:focus .clients-logo {
-    fill: var(--accent-color);
 }
 
 /*-- section 6 --*/
@@ -537,6 +510,7 @@ body {
     font-style: normal;
     width: 231px;
     height: 81px;
+    margin-right: 70px;
 }
 
 .footer-contacts:not(:last-child) {
@@ -565,26 +539,21 @@ body {
 
 .footer-wrapper-social {
     width: 206px;
-    height: 80px;
-    padding-top: 72px;
-    padding-bottom: 100px;
 }
 
 .footer-title {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--primary-text-color-theme-light);
     margin-bottom: 20px;
+
 }
 
 .footer-social-list {
     display: flex;
-    justify-content: center;
     column-gap: 10px;
 }
 
@@ -595,11 +564,16 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    fill: var(--footer-fill-social-links);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-social-icon {
     width: 20px;
     height: 20px;
-    fill: #FFFFFF;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--accent-color);
 }
